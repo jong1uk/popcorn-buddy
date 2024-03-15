@@ -35,11 +35,10 @@ button {
     background-color: var(--button-color);
     color: #e6e6e6;
     font-size: 25px;
-    
+
     margin-top: -20px;
     border: 0px solid #3e3434;
     border-radius: 5px;
-
 }
 
 h1{
