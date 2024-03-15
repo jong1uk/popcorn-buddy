@@ -1,0 +1,50 @@
+:root {
+    --main-font-color : #ffc700;
+    --main-bg-color: #1d2934;
+    --button-color: hsl(204, 5%, 40%);
+    --form-color: #3c444a;
+}
+* {
+    font-family: "noto Sans KR", sans-serif;
+}
+
+body {
+    background-color: var(--main-bg-color);
+}
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100dvh;
+    background: var(--main-bg-color);
+    text-align: center;
+
+}
+
+.content {
+    padding: 3rem;
+    font-size: 2rem;
+    border-radius: 1rem;
+    background: coral;
+}
+
+button {
+    width: 150px;
+    height: 60px;
+    background-color: var(--button-color);
+    color: #e6e6e6;
+    font-size: 25px;
+    
+    margin-top: -20px;
+    border: 0px solid #3e3434;
+    border-radius: 5px;
+
+}
+
+h1{
+    color: var(--main-font-color);
+    font-size: 80px;
+    margin-top: -80px;
+    text-shadow: 5px 5px 1px #313131;
+}
