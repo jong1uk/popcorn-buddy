@@ -1,0 +1,12 @@
+:root {
+    --main-font-color : #ffc700;
+    --main-bg-color: #1d2934;
+    --button-color: #62686c;
+}
+body{
+    background-color: #1d2934;
+}
+.header{
+    display: flex;
+    margin: 0px 0px 0px 35px;
+}
