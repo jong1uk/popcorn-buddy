@@ -3,10 +3,10 @@
 
 @import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700,800,900');
 :root {
-  --main-font-color : #ffc700;
+  --main-font-color : #e1e1e1;
   --main-bg-color: #1d2934;
   --button-color: hsl(204, 5%, 40%);
-  --form-color: #3c444a;
+  --form-color: #62686c;
   --red-color: #e1e1e1;
 }
 body{
@@ -26,23 +26,25 @@ a:hover {
 	text-decoration: none;
 }
 .link {
-  color: var(--main-bg-color);
+  color: #e0e0e0;
 }
 .link:hover {
-  color: var(--main-font-color);
+  color: #62686c;
 }
 p {
-  font-weight: 499px;
+  font-weight: 500;
   font-size: 14px;
   line-height: 1.7;
 }
 h4 {
   font-weight: 600;
+  color: #e0e0e0;
 }
 h6 span{
   padding: 0 20px;
   text-transform: uppercase;
   font-weight: 700;
+  color: #e0e0e0;
 }
 .section{
   position: relative;
@@ -78,7 +80,7 @@ h6 span{
   height: 36px;
   border-radius: 50%;
   color: var(--main-font-color);
-  background-color: #102770;
+  background-color: #3c444a;
   font-family: 'unicons';
   content: '\eb4f';
   z-index: 20;
@@ -117,7 +119,7 @@ h6 span{
 .card-front, .card-back {
   width: 100%;
   height: 100%;
-  background-color:var(--red-color);
+  background-color:#3c444a;
 
   /* background-image: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/1462889/pat.svg'); */
   background-position: bottom center;
@@ -267,18 +269,18 @@ h6 span{
   text-align: center;
   border: none;
   background-color: var(--main-font-color);
-  color: #102770;
+  color: #3c444a;
   box-shadow: 0 8px 24px 0 rgba(255,235,167,.2);
 }
 .btn:active,
 .btn:focus{  
-  background-color: #102770;
+  background-color: #3c444a;
   color: var(--main-font-color);
   box-shadow: 0 8px 24px 0 rgba(16,39,112,.2);
 }
 .btn:hover{  
-  background-color: #102770;
-  color: var(--main-font-color);
+  background-color: #62686c;
+  color: #e1e1e1;
   box-shadow: 0 8px 24px 0 rgba(16,39,112,.2);
 }
 
