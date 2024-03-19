@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../05_myPage/CSS/default_color.css">
+    <style>
+        body {
+            background-color: var(--main-bg-color);
+        }
+        .header {
+            display: flex;
+            margin: 0px 0px 0px 35px;
+        }
+
+        h1 {
+            color: #ffc700;
+        }
+
+        .zzim {
+            display: flex;
+            justify-content: center;
+            /* 수평 가운데 정렬 */
+            align-items: center;
+            /* 수직 가운데 정렬 */
+        }
+
+        .centerbox {
+            width: 1440px;
+            /* 원하는 넓이 */
+        }
+
+        h2 {
+            display: inline-block;
+            clear: both;
+            /* h2 아래에 있는 모든 요소들과의 float 속성을 해제합니다. */
+            text-align: left 70%;
+            /* 텍스트를 왼쪽 정렬합니다. */
+            color: #ffc700;
+            /* 텍스트 색상을 설정합니다. */
+        }
+
+        .userimg {
+            width: 70px;
+            height: 70px;
+            background: #999999;
+            margin: auto;
+            display: flex;
+            justify-content: center;
+            border-radius: 10px;
+        }
+
+        p {
+            text-align: center;
+            color: #eeeeee;
+            ;
+        }
+
+        .p_2 {
+            color: #aaaaaa;
+            font-size: small;
+        }
+
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+
+        }
+
+        .box1 {
+            width: 250px;
+            height: 320px;
+            background: #999999;
+            /* border-radius: 10px; */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 10px 45px;
+            margin: 10px;
+        }
+
+        /*-------------------------------------------------------------*/
+        .menu ::before {
+            font-family: 'Material Icons';
+            font-size: 1.5em;
+            float: left;
+            clear: left;
+        }
+
+        .menu label::before {
+            content: '\e5d2';
+        }
+
+        .menu li:nth-child(1) a::before {
+            content: '\f02e';
+        }
+
+        .menu li:nth-child(2) a::before {
+            content: '\e8d6';
+        }
+
+        .menu li:nth-child(3) a::before {
+            content: '\e88a';
+        }
+
+        .menu li:nth-child(4) a::before {
+            content: '\e8cc';
+        }
+
+        .menu li:nth-child(5) a::before {
+            content: '\e87d';
+        }
+
+        .menu li:nth-child(6) a::before {
+            content: '\e8b8';
+        }
+
+        #expand-menu {
+            /* 체크박스 폼 요소 감춤 */
+            display: none;
+        }
+
+        #expand-menu:checked~ul {
+            /* 체크박스 체크되었으면 메뉴 목록 표시 - 반응형 표시용 */
+            display: block;
+            height: auto;
+        }
+
+        .menu {
+            position: absolute;
+            display: block;
+            width: 200px;
+            background-color: #000;
+            color: #fff;
+            border-radius: 20px;
+            padding: 10px;
+            box-sizing: border-box;
+            overflow: hidden;
+            /* 반응형 애니메이션용 */
+            transition: all 0.5s ease;
+            /* 반응형 애니메이션 */
+        }
+
+        .menu ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .menu>label,
+        .menu a {
+            display: block;
+            height: 25px;
+            padding: 8px;
+            cursor: pointer;
+            color: #fff;
+            text-decoration: none;
+        }
+
+        .menu a:hover {
+            color: #000;
+        }
+
+        .menu>label:hover,
+        .menu ul li:hover {
+            background-color: #fff;
+            color: #000;
+            border-radius: 10px;
+        }
+
+        .menu div {
+            line-height: 1.5;
+            font-size: 1em;
+            font-family: 'Noto Sans KR';
+            padding: 0 0 0 50px;
+            /* 아이콘과 텍스트 사이 여백 */
+        }
+
+        @media screen and (max-width:1023px) {
+            .menu {
+                /* 1단계 */
+                width: 60px;
+            }
+        }
+
+        @media screen and (max-width:560px) {
+            .menu #expand-menu:not(:checked)~ul {
+                /* 2단계 */
+                display: none;
+            }
+        }
+
+        .menu div {
+            position: absolute;
+            /* 절대 위치로 텍스트 고정 */
+            left: 50px;
+            line-height: 1.5;
+            font-size: 1em;
+            font-family: 'Noto Sans KR';
+            padding: 0 0 0 20px;
+            /* 패딩 20p로 축소 */
+        }
+
+        .menu #expand-menu:not(:checked)~ul {
+            /* 데스크탑 화면에서도 메뉴를 접었더 펼칠 수 있음 */
+            display: none;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            /* 화면 전체 높이로 설정 */
+            position: relative;
+            /* body를 기준으로 자식 요소를 배치하기 위해 */
+        }
+
+        .menu {
+            position: fixed;
+            /* body를 기준으로 위치를 지정하기 위해 */
+            bottom: 20px;
+            /* 바닥에서 20px 위로 */
+            right: 20px;
+            /* 오른쪽에서 20px 왼쪽으로 */
+            /* 기존의 flex 속성은 제거합니다. */
+            width: 200px;
+            background-color: #000;
+            color: #fff;
+            border-radius: 20px;
+            padding: 10px;
+            box-sizing: border-box;
+            overflow: hidden;
+            /* 반응형 애니메이션용 */
+            transition: all 0.5s ease;
+            /* 반응형 애니메이션 */
+        }
+    </style>
+</head>
+
+<body>
+    <div class="header">
+        <h1>POPCORN<br>BUDDY</h1>
+    </div>
+    <div class="userimg">
+    </div>
+    <p>닉네임 : </p>
+    <p class="p_2">프로필 수정</p>
+    <div class="zzim">
+        <div class="centerbox">
+            <hr>
+            <h2>내가 찜한 영화</h2>
+            <br>
+            <div class="container">
+                <div class="box1" id="editButton">편집</div>
+                <div class="box1"></div>
+                <div class="box1"></div>
+                <div class="box1"></div>
+                <br>
+            </div>
+        </div>
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <div class="menu">
+            <label for="expand-menu">
+                <div>메뉴</div>
+            </label>
+            <input type="checkbox" id="expand-menu" name="expand-menu">
+            <ul>
+                <li>
+                    <a href="#" class="item">
+                        <div>채팅</div>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="item">
+                        <div>마이페이지</div>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="item">
+                        <div>홈으로</div>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</body>
+
+</html>
