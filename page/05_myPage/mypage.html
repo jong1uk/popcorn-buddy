@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- Material Symbols Outlined 폰트 추가 -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200">
+    <link rel="stylesheet" href="../05_myPage/CSS/mypage.css">
+    <link rel="stylesheet" href="../05_myPage/CSS/menustyle.css">
+    <style>
+        h1{
+            color: #ffc700;
+        }
+        .zzim{        
+            display: flex;
+            justify-content: center; /* 수평 가운데 정렬 */
+            align-items: center; /* 수직 가운데 정렬 */
+        }
+        .centerbox{
+            width: 1440px; /* 원하는 넓이 */
+        }
+        
+        h2 {
+        display: inline-block;
+        clear: both; /* h2 아래에 있는 모든 요소들과의 float 속성을 해제합니다. */
+        text-align: left 70%; /* 텍스트를 왼쪽 정렬합니다. */
+        color: #ffc700; /* 텍스트 색상을 설정합니다. */
+        }
+
+        .userimg{
+            width: 70px;
+            height: 70px;
+            background: #999999;
+            margin: auto;
+            display: flex;
+            justify-content: center;
+            border-radius: 10px;
+        }
+        p{
+            text-align: center;
+            color: #eeeeee;;
+        }
+        .p_2{
+            color: #aaaaaa;
+            font-size: small;
+        }
+        .container {
+            display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+
+        }
+        .box1{
+            width: 250px;
+            height: 320px;
+            background: #999999;
+            /* border-radius: 10px; */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 10px 45px;
+            margin: 10px;
+            
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>POPCORN<br>BUDDY</h1>
+    </div>
+    <div class="user">
+    <div class="userimg"></div>
+    <p>닉네임 : </p>
+    <p class="p_2">프로필 수정</p>
+    </div>
+    <div class="zzim">
+        <div class="centerbox"> 
+        <hr>
+        <h2>내가 찜한 영화</h2>
+        <br>
+        <div class="container">
+            <div class="box1" id="editButton">편집</div>
+            <div class="box1"></div>
+            <div class="box1"></div>
+            <div class="box1"></div>
+            <br>
+        </div>     
+        </div>
+    <div class="menu">
+        <label for="expand-menu">
+            <div>메뉴</div>
+        </label>
+        <input type="checkbox" id="expand-menu" name="expand-menu">
+        <ul>
+            <li>
+                <a href="#" class="item">
+                    <div>채팅</div>
+                </a>
+            </li>
+            <li>
+                <a href="#" class="item">
+                    <div>마이페이지</div>
+                </a>
+            </li>
+            <li>
+                <a href="#" class="item">
+                    <div>홈으로</div>
+                </a>
+            </li>
+        </ul>
+    </div>
+</body>
+</html>
