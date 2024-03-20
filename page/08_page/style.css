@@ -1,0 +1,171 @@
+
+body {      
+    background-color: #1d2934;     
+}
+h4 {        
+    color: #b4b4b4;
+}
+p {
+    margin-left: 40px; 
+    color: #b4b4b4;
+}
+.logo {
+    padding: 10px;
+    margin: 30px;
+    text-align: left;   /*로고 왼쪽 정렬*/
+    color: #ffc700;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.container {
+    display: flex;  /*내부 요소를 가로로 배열*/
+    margin-bottom: 30pxd;
+    flex-wrap: wrap;    /*내부 요소가 넘칠 경우 줄바꿈*/
+    justify-content: center;    /*가로 정렬을 중앙으로 설정*/
+}
+.box {
+    padding: 5px 45px;
+    margin: 5px;
+    width: 80px;
+    background-color: #cecece;
+}
+.image {
+    border: 1px solid #ccc;
+    width: 300px;
+    height: 400px;
+    margin: 20px;
+    border-radius: 5px;
+    overflow: hidden;   /*내용이 넘치는 경우 표시 ㄴㄴ*/
+}
+.image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* 아이콘 스타일링 */
+.menu ::before {
+    font-family: 'Material Icons';  /*아이콘 폰트를 사용*/
+    font-size: 1.5em;   /*아이콘 크기 설정*/
+    float: left;    /*왼쪽으로 이동*/
+    clear: left;    /*왼쪽 여백을 비웁니다*/
+}
+.menu label::before {
+    content: '\e5d2';   /*메뉴아이콘*/
+}
+.menu li:nth-child(1) a::before {
+    content: '\e625';   /*1번째 아이콘*/
+}
+.menu li:nth-child(2) a::before {
+    content: '\e853';   /*2*/
+}
+.menu li:nth-child(3) a::before {
+    content: '\e9ba';   /*3*/
+}
+#expand-menu {
+    /* 체크박스 폼 요소 감춤 */
+    display: none;
+}
+#expand-menu:checked ~ ul {
+    /* 체크박스 체크되었으면 메뉴 목록 표시 - 반응형 표시용 */
+    display: block;
+    height: auto;
+}
+.menu {
+    display: block;
+    width: 200px;
+    background-color: #000;
+    color: #fff;
+    border-radius: 20px;
+    padding: 10px;
+    box-sizing: border-box;
+    overflow: hidden;
+    /* 반응형 애니메이션용 */
+    transition: all 0.5s ease;  /*모든 속성에 대해 0.5초 동안 애니메이션을 적용합니다.*/
+    /* 반응형 애니메이션 */
+}
+.menu ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.menu > label,
+.menu a {
+    display: block;
+    height: 25px;
+    padding: 8px;
+    cursor: pointer;
+    color: #fff;
+    text-decoration: none;
+}
+.menu a:hover {
+    color: #000;
+}
+.menu > label:hover,
+.menu ul li:hover {
+    background-color: #fff;
+    color: #000;
+    border-radius: 10px;
+}
+.menu div {
+    line-height: 1.5;
+    font-size: 1em;
+    font-family: 'Noto Sans KR';
+    padding: 0 0 0 50px;
+    /* 아이콘과 텍스트 사이 여백 */
+}
+@media screen and (max-width:1023px) {
+    .menu {
+        /* 1단계 */
+        width: 60px;
+    }
+}
+@media screen and (max-width:560px) {
+    .menu #expand-menu:not(:checked) ~ ul {
+        /* 2단계 */
+        display: none;
+    }
+}
+.menu div {
+    position: absolute;
+    /* 절대 위치로 텍스트 고정 */
+    left: 50px;
+    line-height: 1.5;
+    font-size: 1em;
+    font-family: 'Noto Sans KR';
+    padding: 0 0 0 20px;
+    /* 패딩 20p로 축소 */
+}
+.menu #expand-menu:not(:checked) ~ ul {
+    /* 데스크탑 화면에서도 메뉴를 접었더 펼칠 수 있음 */
+    display: none;
+}
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    /* 화면 전체 높이로 설정 */
+    position: relative;
+    /* body를 기준으로 자식 요소를 배치하기 위해 */
+}
+
+.menu {
+    position: fixed; /* 스크롤에 따라 고정됨 */
+    /* body를 기준으로 위치를 지정하기 위해 */
+    bottom: 20px;
+    /* 바닥에서 20px 위로 */
+    right: 20px;
+    /* 오른쪽에서 20px 왼쪽으로 */
+    /* 기존의 flex 속성은 제거합니다. */
+    width: 200px;
+    background-color: #000;
+    color: #fff;
+    border-radius: 20px;
+    padding: 10px;
+    box-sizing: border-box;
+    overflow: hidden;
+    /* 반응형 애니메이션용 */
+    transition: all 0.5s ease;
+    /* 반응형 애니메이션 */
+    margin: 30px;
+}
