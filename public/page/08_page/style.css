@@ -1,21 +1,27 @@
 
-body {
-    background-color: #1d2934;
+body {      
+    background-color: #1d2934;     
 }
-h4 {
+h4 {        
+    color: #b4b4b4;
+}
+p {
+    margin-left: 40px; 
     color: #b4b4b4;
 }
 .logo {
     padding: 10px;
     margin: 30px;
-    text-align: left;
+    text-align: left;   /*로고 왼쪽 정렬*/
     color: #ffc700;
     font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
 .container {
-    display: flex;
+    display: flex;  /*내부 요소를 가로로 배열*/
     margin-bottom: 30pxd;
+    flex-wrap: wrap;    /*내부 요소가 넘칠 경우 줄바꿈*/
+    justify-content: center;    /*가로 정렬을 중앙으로 설정*/
 }
 .box {
     padding: 5px 45px;
@@ -23,46 +29,38 @@ h4 {
     width: 80px;
     background-color: #cecece;
 }
-/* p {
-    margin-left: 40px;
-    color: #b4b4b4;
-} */
-/* .container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-} */
 .image {
     border: 1px solid #ccc;
     width: 300px;
     height: 400px;
     margin: 20px;
     border-radius: 5px;
-    overflow: hidden;
+    overflow: hidden;   /*내용이 넘치는 경우 표시 ㄴㄴ*/
 }
 .image img {
     width: 100%;
     height: 100%;
     object-fit: cover;
 }
-/* #opt{ justify-content: space-between;} */
+
+/* 아이콘 스타일링 */
 .menu ::before {
-    font-family: 'Material Icons';
-    font-size: 1.5em;
-    float: left;
-    clear: left;
+    font-family: 'Material Icons';  /*아이콘 폰트를 사용*/
+    font-size: 1.5em;   /*아이콘 크기 설정*/
+    float: left;    /*왼쪽으로 이동*/
+    clear: left;    /*왼쪽 여백을 비웁니다*/
 }
 .menu label::before {
-    content: '\e5d2';
+    content: '\e5d2';   /*메뉴아이콘*/
 }
 .menu li:nth-child(1) a::before {
-    content: '\e625';
+    content: '\e625';   /*1번째 아이콘*/
 }
 .menu li:nth-child(2) a::before {
-    content: '\e853';
+    content: '\e853';   /*2*/
 }
 .menu li:nth-child(3) a::before {
-    content: '\e9ba';
+    content: '\e9ba';   /*3*/
 }
 #expand-menu {
     /* 체크박스 폼 요소 감춤 */
@@ -83,7 +81,7 @@ h4 {
     box-sizing: border-box;
     overflow: hidden;
     /* 반응형 애니메이션용 */
-    transition: all 0.5s ease;
+    transition: all 0.5s ease;  /*모든 속성에 대해 0.5초 동안 애니메이션을 적용합니다.*/
     /* 반응형 애니메이션 */
 }
 .menu ul {
@@ -141,6 +139,14 @@ h4 {
 .menu #expand-menu:not(:checked) ~ ul {
     /* 데스크탑 화면에서도 메뉴를 접었더 펼칠 수 있음 */
     display: none;
+}
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    /* 화면 전체 높이로 설정 */
+    position: relative;
+    /* body를 기준으로 자식 요소를 배치하기 위해 */
 }
 
 .menu {
