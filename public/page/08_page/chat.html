@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+        input[type="text"] {
+            width: calc((100% - 20px)); /* 수정: 버튼 크기에 따라 입력창 크기 조절  */
+            height: 80px;
+            font-size: 20px;
+            margin-right: 10px;
+        }
+        input[type="button"] {
+            height: 86px;
+            width: 200px;
+            font-size: 20px;
+        }
+        .chat {
+            display: flex;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <hr>
+        <div class="chat" id="popup">
+            <input type="text" placeholder="채팅을 입력하세요">
+            <input type="button" value="입력">
+        </div>
+    </div>
+</body>
+</html>
