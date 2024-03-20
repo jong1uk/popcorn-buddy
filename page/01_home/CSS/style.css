@@ -4,9 +4,9 @@
     --button-color: hsl(204, 5%, 40%);
     --form-color: #3c444a;
 }
-* {
+/* * {
     font-family: "noto Sans KR", sans-serif;
-}
+} */
 
 body {
     background-color: var(--main-bg-color);
@@ -35,7 +35,7 @@ button {
     color: #e6e6e6;
     font-size: 25px;
 
-    margin-top: -20px;
+    margin-top: 10px;
     border: 0px solid #3e3434;
     border-radius: 5px;
 }
