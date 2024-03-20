@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <script language="javascript">
+            function showPopup() {
+                window.open("chat.html", "a", "width=500, height=700, left=100, top=50");
+            }
+        </script>
+    </head>
+    <link
+    href="https://fonts.googleapis.com/icon?family=Material+Icons"
+    rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
+    <body>
+        <h2 class="logo" id="bbb">POPCORN<br>BUDDY</h2>
+        <p>내가 찜한 영화</p>
+        <div class="container">
+            <div class="image">
+                <img src="이미지1.jpg" alt="이미지 1">
+            </div>
+            <div class="image">
+                <img src="이미지2.jpg" alt="이미지 2">
+            </div>
+            <div class="image">
+                <img src="이미지3.jpg" alt√="이미지 3">
+            </div>
+            <div class="image">
+                <img src="이미지4.jpg" alt="이미지 4">
+            </div>
+            <div class="image">
+                <img src="이미지5.jpg" alt="이미지 5">
+            </div>
+            <div class="image">
+                <img src="이미지6.jpg" alt="이미지 6">
+            </div>
+            <div class="image">
+                <img src="이미지7.jpg" alt="이미지 7">
+            </div>
+            <div class="image">
+                <img src="이미지8.jpg" alt="이미지 8">
+            </div>
+        </div>
+
+        <div class="menu">
+            <label for="expand-menu">
+                <div>메뉴</div>
+            </label>
+            <input type="checkbox" id="expand-menu" name="expand-menu">
+            <ul>
+                <li>
+                    <a href="javascript:void(0);" class="item" onclick="showPopup()">
+                        <div>채팅</div>
+                    </a>
+                </li>
+                <li>
+                    <a href="mypage.html" class="item">
+                        <div>마이페이지</div>
+                    </a>
+                </li>
+                <li>
+                    <a href="logout.html" class="item">
+                        <div>로그아웃</div>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </body>
+</html>
