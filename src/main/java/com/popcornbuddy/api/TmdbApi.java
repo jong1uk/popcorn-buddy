@@ -11,7 +11,7 @@ public class TmdbApi {
 
     public static void main(String[] args) throws IOException {
         String apiKey = "2c30821abaa1c963cd182764abf5bcd1";
-        String movieTitle = "다크나이트"; // 검색하고자 하는 영화 이름
+        String movieTitle = "다크 나이트"; // 검색하고자 하는 영화 이름
 
         // 영화 이름을 TMDB API에서 검색하기 위한 URL 생성
         String encodedMovieName = URLEncoder.encode(movieTitle, "UTF-8");

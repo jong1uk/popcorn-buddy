@@ -68,17 +68,9 @@ const displayPacketMessage = function ($parentSelector, message) {
     switch (msgObj.cmd) {
         case 'connect':
             msg = msgObj.result;
-            
             break;
         case 'login':
-            id = msgObj.id;
             msg = msgObj.result === 'ok' ? '로그인 성공' : '로그인 실패'
-            console.log(id);
-            localStorage.setItem('id', id);
-            localStorage.setItem('login', 'true');
-            if(msgObj.result==='ok'){
-
-            }
             break;
         case 'allchat':
             if ('result' in msgObj)
@@ -137,4 +129,6 @@ window.onload = function() {
     const childElem = document.createElement('div');
     childElem.textContent = msg;
     parentElem.appendChild(childElem);
+
+
 }   

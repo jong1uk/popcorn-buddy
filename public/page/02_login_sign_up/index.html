@@ -11,43 +11,35 @@
 </head>
 <script src="JS/app.js"></script>
 <script>
-	let userEmail = '';        // id 보관용
-	let userPass = '';
+	let userId = '';        // id 보관용
+	let userPwd = '';
 	let userName = '';
+	const id = document.querySelector('#logId').value;
+	const name = document.querySelector('#logName').value;
+	const email = document.querySelector('#logEmail').value;
+	const pwd = document.querySelector('#logPwd').value;
+	const pwdCheck = document.querySelector('#logPwdCheck').value;
 
 	const sendLogIn = function () {
-		const email = document.querySelector('#logemail').value;
-		const pass = document.querySelector('#logpass').value;
-		userEmail = email;        // 나중에 msg전송 때 사용하기 위해
+		userId = id;        // 나중에 msg전송 때 사용하기 위해
 		const packet = {
 			cmd: 'login',
-			email: email,
-			pass: pass
+			id: id,
+			pwd: pwd
 		};
 		const jsonStr = JSON.stringify(packet);     // js객체 -> json문자열
 		sendMessage(jsonStr);
 	}
 	const sendSignUp = function () {
-		const name = document.querySelector('#logname').value;
-		const email = document.querySelector('#logemail').value;
-		const pass = document.querySelector('#logpass').value;
 		userId = email;        // 나중에 msg전송 때 사용하기 위해
 		const packet = {
 			cmd: 'signup',
+			id: id,
 			name: name,
 			email: email,
-			pass: pass
+			pwd: pwd,
+			pwdCheck: pwdCheck
 		};
-		const jsonStr = JSON.stringify(packet);     // js객체 -> json문자열
-		sendMessage(jsonStr);
-	}
-	const sendChatMsg = function () {
-		const message = document.querySelector('#messageInput').value;
-		const packet = {
-			cmd: 'allchat',
-			id: userId,
-			msg: message
-		}
 		const jsonStr = JSON.stringify(packet);     // js객체 -> json문자열
 		sendMessage(jsonStr);
 	}
@@ -117,41 +109,37 @@
 								</div>
 
 								<!-- 회원가입 -->
-								<div class="card-back"> 
+								<div class="card-back">
 									<div class="center-wrap">
 										<div class="section text-center">
 											<h4 class="mb-4 pb-3">Sign Up</h4>
 											<div class="form-group">
-												<input type="text" name="logid" class="form-style"
-													placeholder="Your Id" id="logid" autocomplete="off">
+												<input type="text" id ="logId" name="logId" class="form-style" placeholder="Your Id"
+													id="logid" autocomplete="off">
 												<i class="input-icon uil uil-user"></i>
 											</div>
+											<div class="form-group mt-">
+												<input type="text" name="logName" class="form-style"
+													placeholder="Your Name" id="logName" autocomplete="off">
+												<i class="input-icon uil uil-lock-alt"></i>
+											</div>
 											<div class="form-group mt-2">
-												<input type="email" name="logemail" class="form-style"
-													placeholder="Your Email" id="logemail" autocomplete="off">
+												<input type="email" name="logEmail" class="form-style"
+													placeholder="Your Email" id="logEmail" autocomplete="off">
 												<i class="input-icon uil uil-at"></i>
 											</div>
 											<div class="form-group mt-2">
-												<input type="password" name="logpass" class="form-style"
-													placeholder="Your Password" id="logpass" autocomplete="off">
+												<input type="password" name="logPwd" class="form-style"
+													placeholder="Your Password" id="logPwd" autocomplete="off">
 												<i class="input-icon uil uil-lock-alt"></i>
 											</div>
 											<div class="form-group mt-">
-												<input type="password" name="logpasschek" class="form-style"
-													placeholder="Your Password" id="logpass" autocomplete="off">
+												<input type="password" name="logPwdChek" class="form-style"
+													placeholder="Your Password Check" id="logPwdCheck" autocomplete="off">
 												<i class="input-icon uil uil-lock-alt"></i>
 											</div>
-											<div class="form-group mt-">
-												<input type="text" name="logname" class="form-style"
-													placeholder="Your Password" id="logname" autocomplete="off">
-												<i class="input-icon uil uil-lock-alt"></i>
-											</div>
-											<div class="form-group mt-">
-												<input type="password" name="logpass" class="form-style"
-													placeholder="Your Password" id="logpass" autocomplete="off">
-												<i class="input-icon uil uil-lock-alt"></i>
-											</div>
-											<a href="#" id="btnSignUp"class="btn mt-4">Submit</a>
+										
+											<a href="#" id="btnSignUp" class="btn mt-4">Submit</a>
 										</div>
 									</div>
 								</div>

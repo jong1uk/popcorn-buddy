@@ -36,17 +36,17 @@ public class KMDBApi {
 
             // 원하는 정보 추출
 //            String[] plots = movie.getJSONArray("plot");
-            String posterUrl = movie.getString("posters"); // 포스터 이미지
-            String rating = movie.getString("rating"); // 관람 연령
-            String genre = movie.getString("genre"); // 장르
-            String runtime = movie.getString("runtime"); // 상영 시간
+//            String posterUrl = movie.getString("posters"); // 포스터 이미지
+//            String rating = movie.getString("rating"); // 관람 연령
+//            String genre = movie.getString("genre"); // 장르
+//            String runtime = movie.getString("runtime"); // 상영 시간
 
             // 추출된 정보 사용
 //            System.out.println("Plot: " + plot);
-            System.out.println("Poster URL: " + posterUrl);
-            System.out.println("Rating: " + rating);
-            System.out.println("Genre: " + genre);
-            System.out.println("Runtime: " + runtime);
+//            System.out.println("Poster URL: " + posterUrl);
+//            System.out.println("Rating: " + rating);
+//            System.out.println("Genre: " + genre);
+//            System.out.println("Runtime: " + runtime);
 
             conn.disconnect();
         } catch (Exception e) {
